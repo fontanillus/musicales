@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    margin: 0;
+    font-family: sans-serif;
+    width: 100%;
+    background-color: #1e0a8d;
+    }
+
+div {
+width: 96%;
+background: url(../img/teatro.avif);
+border-style: double;
+border-width: 10px;
+border-color: gold;
+    
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: cursive;
+    padding: 8px;
+    background-color: #1e0a8d;
+    color: gold;
+    margin: 0 auto;
+    width: 100%;
+                   }
+
+header>img {
+width: 10%;
+}
+
+.tamaño {
+width: 15%;
+
+}
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    object-fit: cover;
+    gap: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery::after {
+    content: "";
+    width: 350px;
+}
+
+
+/*La propiedad flex-wrap determina como se comportan tus elementos flex cuando el contenedor flex es demasiado pequeño. Si se establece como wrap, los elementos se colocan en la siguiente fila o columna. nowrap (por defecto) evitará que los elementos se coloquen en varias líneas y los encogerá si es necesario.*/
+
+Haga que sus elementos flexibles se coloquen en la siguiente fila cuando se queden sin espacio.
+/*La propiedad flex-wrap determina como se comportan tus elementos flex cuando el contenedor flex es demasiado pequeño. Si se establece como wrap, los elementos se colocan en la siguiente fila o columna. nowrap (por defecto) evitará que los elementos se coloquen en varias líneas y los encogerá si es necesario.
+Haga que sus elementos flexibles se coloquen en la siguiente fila cuando se queden sin espacio./*
+
+/*La propiedad justify-content determina cómo se posicionan los elementos dentro de un contenedor flex a lo largo del eje principal, afectando a su posición y al espacio que los rodea.
+Dale a tu selector .gallery una propiedad justify-content con el valor center./*
+
+/*a propiedad align-items posiciona el contenido flex a lo largo del eje transversal. En este caso, con tu flex-direction establecido en row, el eje transversal sería vertical.
+
+Para centrar verticalmente tus imágenes, dale a tu selector .gallery una propiedad align-items con el valor center.*/
+/* margin 0 auto para centrar"/*
+
+/*Observe como algunas de sus imágenes se han distorsionado. Esto se debe a que las imágenes tienen diferentes relaciones de aspecto. En lugar de establecer cada relación de aspecto individualmente, puedes utilizar la propiedad object-fit para determinar como deben comportarse las imágenes.
+
+Dale a tu selector .gallery img la propiedad object-fit establecida en cover. Esto le dirá a la imagen que llene el contenedor img mientras mantiene la relación de aspecto, lo que resulta en un recorte para ajustarse./*
+
+/*Tus imágenes necesitan algo de espacio entre ellas.
+
+La propiedad abreviada CSS gap especifica los espacios, también conocidos como canales, entre filas y columnas. La propiedad gap y sus subpropiedades row-gap y column-gap proporcionan esta funcionalidad para los diseños flex, grid, y multicolumna. La propiedad se aplica al elemento contenedor.
+
+Dale a tu contenedor flex .gallery una propiedad gap con un valor de 16px.*/
+
+/*El pseudo-elemento ::after crea un elemento que es el último hijo del elemento seleccionado. Puedes hacer uso de él para añadir un elemento vacío a continuación de la ultima imagen. Si en su propiedad width se le asigna el mismo valor que tiene en las imágenes, empujará la última imagen hacia la izquierda cuando la galería tenga un diseño de dos columnas. En este momento, está en el centro porque se ha establecido justify-content: center en el contenedor flex.
+
+Ejemplo:
+
+Código de ejemplo
+.container::after {
+  content: "";
+  width: 860px;
+}*/
